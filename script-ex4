@@ -1,11 +1,14 @@
 #!/bin/bash
 
-States=("Telanagana" "Kerla" "AP" "UP")
+STATES=("Telanagana" "Kerla" "AP" "UP")
 
-echo "Print first state is: ${States[0]}"
-echo "Print Second state is: ${States[1]}"
-echo "Print Third state is: ${States[2]}"
+echo "Print first state is: ${STATES[0]}"
+echo "Print Second state is: ${STATES[1]}"
+echo "Print Third state is: ${STATES[2]}"
 
-echo "Print total states are: ${States[@]}"
+echo "Print total states are: ${STATES[@]}"
+
+
+
 
 
