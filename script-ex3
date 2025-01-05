@@ -1,0 +1,8 @@
+#!bin/bash
+FRUIT1=Apple
+FRUIT2=Mango
+
+echo "Print fruit name is: $FRUIT1"
+echo "Print second fruit name is: $FRUIT2"
+
+echo "Print total fruits are: $FRUIT1+$FRUIT2"
