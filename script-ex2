@@ -2,8 +2,12 @@
 BOY1=Hari
 BOY2=Das
 
+sed -i 's/\r//g' script-ex2
+
+
 echo "$BOY1:: Hi $BOY2, how are you?"
 echo "$BOY2:: Hello $BOY1, iam doing good.how about you?"
 echo "$BOY1:: Going fine as of now $BOY2, how is your work."
+
 
 
