@@ -2,7 +2,7 @@
 PERSON1=Hari
 PERSON2=Das
 
-echo "$PERSON1:: Hi $PERSON2, How r u?"
-echo "$PERSON2:: Hi $PERSON1, iam good. How about u?"
-echo "$PERSON1:: I am fine. How is your going."
-echo "$PERSON2:: Doing good as of now."
+echo "$PERSON1:: Hi $PERSON2, how are you?"
+echo "$PERSON2:: Hello $PERSON1, iam doing good.how about you?"
+echo "$PERSON1:: Going fine as of now $PERSON2, how is your work."
+
