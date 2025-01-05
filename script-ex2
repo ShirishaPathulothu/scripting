@@ -1,8 +1,9 @@
 #!/bin/bash
-PERSON1=Hari
-PERSON2=Das
+BOY1=Hari
+BOY2=Das
 
-echo "$PERSON1:: Hi $PERSON2, how are you?"
-echo "$PERSON2:: Hello $PERSON1, iam doing good.how about you?"
-echo "$PERSON1:: Going fine as of now $PERSON2, how is your work."
+echo "$BOY1:: Hi $BOY2, how are you?"
+echo "$BOY2:: Hello $BOY1, iam doing good.how about you?"
+echo "$BOY1:: Going fine as of now $BOY2, how is your work."
+
 
