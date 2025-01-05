@@ -1,4 +1,6 @@
 #!/bin/bash
+sed -i 's/\r//' script-ex5
+
 PERSON1=$1
 PERSON2=$2
 
