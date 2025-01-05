@@ -1,6 +1,7 @@
 #!/bin/bash
 
-Hari:: "Hi das, How r u?"
-Das:: "Hi Hari, iam good. How about u?"
-Hari:: "I am fine. How is your going."
-Das:: "Doing good as of now."
+echo "Hari:: Hi das, How r u?"
+echo "Das:: Hi Hari, iam good. How about u?"
+echo "Hari:: I am fine. How is your going."
+echo "Das:: Doing good as of now."
+
