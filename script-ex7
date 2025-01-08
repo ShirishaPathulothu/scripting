@@ -1,0 +1,8 @@
+#!/bin/bash
+
+if [ $ -eq 0 ]
+
+  echo "Statement is true"
+else
+  echo "Statement is false"
+fi   
