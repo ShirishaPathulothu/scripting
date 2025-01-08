@@ -12,15 +12,16 @@
 #!/bin/bash
 
 # Get the current day of the week (1-7, where 1 is Monday and 7 is Sunday)
-day_of_week=$(date +%u)
+#day_of_week=$(date +%u)
 
 # Check if the day is Monday to Friday (1 to 5)
-if [ "$day_of_week" -ge 1 ] && [ "$day_of_week" -le 5 ]; then
-    echo "There is a class today."
-else
-    echo "No class today."
-fi
+#if [ "$day_of_week" -ge 1 ] && [ "$day_of_week" -le 5 ]; then
+ #   echo "There is a class today."
+#else
+ #   echo "No class today."
+#fi
 
+day_of_week=$(date +%u)
 
 if [ "$day_of_week" -ne 1..5 ]; then
     echo "There is a class today."
