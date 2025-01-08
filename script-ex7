@@ -1,7 +1,11 @@
 #!/bin/bash
 
-if [ $? -gt 10 ]
+NUMBER=$1
 
-  echo "given num is greater than 10"
+if [ $NUMBER -gt 10 ]
+then
 
-fi   
+    echo "given num: $NUMBER is greater than 10"
+else
+    echo "given num: $NUMBER is less than 10"
+fi
