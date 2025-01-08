@@ -10,9 +10,8 @@
 
 #Ex-2
 
-TODAY=$?
 
-if (($TODAY= "Mon" "Tue" "Wed" "Thu" "Fri"))
+if (TODAY= "Mon" "Tue" "Wed" "Thu" "Fri")
 then
     echo "there is class to attend"
 else
