@@ -20,4 +20,11 @@ if [ "$day_of_week" -ge 1 ] && [ "$day_of_week" -le 5 ]; then
 else
     echo "No class today."
 fi
+
+
+if [ "$day_of_week" -ne 1..5 ]; then
+    echo "There is a class today."
+else
+    echo "No class today."
+fi
    
