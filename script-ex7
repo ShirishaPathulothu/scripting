@@ -1,12 +1,12 @@
 #!/bin/bash
 
 
-if [ $? -ne 0 ]
-then
-    echo "Statement is true"
-else
-    echo "Statement is false"
-fi
+#if [ $? -ne 0 ]
+#then
+ #   echo "Statement is true"
+#else
+ #   echo "Statement is false"
+#fi
 
 #Ex-2
 
