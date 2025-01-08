@@ -11,7 +11,7 @@
 #Ex-2
 TODAY=$1
 
-if ($TODAY="Monday" $TODAY="Tue" $TODAY="Wed" $TODAY="Thu" $TODAY="Fri")
+if ($TODAY -eq "Monday" $TODAY -eq "Tue" $TODAY -eq "Wed" $TODAY -eq "Thu" $TODAY -eq "Fri")
 then
     echo "there is class to attend"
 else
