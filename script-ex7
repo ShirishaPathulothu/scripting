@@ -9,11 +9,11 @@
 #fi
 
 #Ex-2
+TODAY=$1
 
-
-if (TODAY= "Monday" "Tue" "Wed" "Thu" "Fri")
+if ($TODAY="Monday" $TODAY="Tue" $TODAY="Wed" $TODAY="Thu" $TODAY="Fri")
 then
     echo "there is class to attend"
 else
     echo "There is no class to attend"
-fi       
+fi   
