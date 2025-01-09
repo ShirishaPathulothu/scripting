@@ -1,0 +1,44 @@
+#!/bin/bash
+
+Userid=$(id -u)
+  echo "userid is : $Userid"
+
+  VALIDATE(){
+    if [ $1 -ne 0 ]
+      echo "$2 is.. Failed"
+      exit 1
+    else
+      echo "$2 is.. Sucess"
+  }
+
+if [ $Userid -ne 0 ]
+then
+   echo "User should have root previleges"
+   exit 1
+fi
+
+dnf list installed git
+
+VALIDATE $? "Installing git"
+
+if [ $? -ne 0 ]
+then
+    echo "Git is not installed.. going to install"
+    dnf install git -y    
+else
+    echo "git is already installed..Nothing to do"
+fi
+
+dnf list installed mysql
+
+VALIDATE $? "Installing mysql"
+
+if [ $? -ne 0 ]
+then 
+    echo "mysql is not installed..going to install"
+    dnf install mysql -y
+else
+    echo "mysql is already installed..Nothing to do"
+fi                  
+  
+
