@@ -2,8 +2,7 @@
 
 Userid=$(id -u)
 
-if [ $? -ne 0 ]
+if [ $Userid -ne 0 ]
 then
    echo "User should have root previleges"
 fi
-   
