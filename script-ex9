@@ -8,6 +8,22 @@ then
    echo "User should have root previleges"
    exit 1
 fi
-dnf install mysql -y
 
+dnf list installed git
+
+if [ $? -ne 0 ]
+then
+    echo "Git is not installed.. going to install"
+    dnf install git -y
+    if [ $? -ne 0 ]
+    then
+       echo "git installation is Sucess.."
+    else
+        echo "git installed is success..Nothing to do"
+    fi    
+else
+    echo "git is already installed..Nothing to do"
+fi
+      
+  
 
