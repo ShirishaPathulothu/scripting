@@ -1,0 +1,53 @@
+#!/bin/bash
+
+#Functions
+
+Userid=$(id -u)
+  echo "userid is : $Userid"
+
+R="\e[31m"
+G="\e[32m"
+Y="\e[33m"
+N="\e[0m"
+
+CHECK_ROOT(){
+    if [ $Userid -ne 0 ]
+    then
+       echo "User should have root previleges"
+       exit 1
+    fi
+}
+
+VALIDATE(){
+    if [ $1 -ne 0 ]
+    then
+      echo -e "$2 is.. $R Failed"
+      exit 1
+    else
+      echo -e "$2 is.. $G Sucess"
+    fi  
+}
+
+CHECK_ROOT
+
+dnf list installed git
+
+if [ $? -ne 0 ]
+then
+    echo "Git is not installed.. going to install"
+    dnf install git -y
+    VALIDATE $? "Installing git"    
+else
+    echo "git is already installed..Nothing to do"
+fi
+
+dnf list installed mysql
+
+if [ $? -ne 0 ]
+then 
+    echo "mysql is not installed..going to install"
+    dnf install mysql -y
+    VALIDATE $? "Installing mysql"
+else
+    echo "mysql is already installed..Nothing to do"
+fi  
