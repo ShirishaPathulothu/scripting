@@ -12,7 +12,7 @@ else
     echo  "age of $PERSON2 is less than 20"
 fi
 
-if [ $Age -lt 20 ]
+if [ $Age -lt 25 ]
 then
     echo "age of $PERSON2 is less than 20"
 else
