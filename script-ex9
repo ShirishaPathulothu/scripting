@@ -6,6 +6,8 @@ Userid=$(id -u)
 if [ $Userid -ne 0 ]
 then
    echo "User should have root previleges"
+   exit 1
 fi
 dnf install mysql -y
+
 
