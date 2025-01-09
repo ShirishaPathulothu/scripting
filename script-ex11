@@ -1,11 +1,11 @@
 #!/bin/bash
 
-#Functions
+#Functions and enabling colors for failed and success Script
 
 Userid=$(id -u)
   echo "userid is : $Userid"
 
-R="\e[31m"
+R="\e[31m"  #colors syntax
 G="\e[32m"
 Y="\e[33m"
 N="\e[0m"
