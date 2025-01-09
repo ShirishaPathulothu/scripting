@@ -9,12 +9,12 @@ if [ $Age -gt 20 ]
 then
     echo "age of $PERSON1 is greater than 20"
 else
-    echo  "age of $PERSON2 is less than 20"
+    echo  "age of $PERSON2 is greater than 20"
 fi
 
 if [ $Age -lt 25 ]
 then
     echo "age of $PERSON2 is less than 20"
 else
-    echo "age of $PERSON1 is greater than 20"    
+    echo "age of $PERSON1 is less than 20"    
 fi     
