@@ -5,14 +5,14 @@ $PERSON2=Ramesh
 
 Age=$1
 
-if [ Age -gt 20 ]
+if [ $Age -gt 20 ]
 then
     echo "age of $PERSON1 is greater than 20"
 else
     echo  "age of $PERSON1 is less than 20"
 fi
 
-if [ Age -ls 20 ]
+if [ $Age -lt 20 ]
 then
     echo "age of $PERSON2 is less than 20"
 else
