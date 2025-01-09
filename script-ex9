@@ -1,0 +1,9 @@
+#!/bin/bash
+
+Userid=$(id -u)
+
+if [ $? -ne 0 ]
+then
+   echo "User should have root previleges"
+fi
+   
