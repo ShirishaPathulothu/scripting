@@ -3,20 +3,20 @@
 Userid=$(id -u)
  echo "user id is: $Userid"
 
- R="\e[31m"
- G="\e[32m"
- Y="\e[33m"
- N="\e[0m"
+R="\e[31m"
+G="\e[32m"
+Y="\e[33m"
+N="\e[0m"
 
- CHECK_ROOT(){
+CHECK_ROOT(){
     if [ $Userid -ne 0 ]
     then
        echo "please login with root previleges"
        exit1
     fi   
- }
+}
 
- VALIDATE(){
+VALIDATE(){
     if [ $1 -ne 0 ]
     then
         echo -e "$2 is ... $R Failed $N"
@@ -24,19 +24,19 @@ Userid=$(id -u)
     else
         echo  -e "$2 is ... $G Success $N"
     fi        
- }
+}
 
- CHECK_ROOT()
+CHECK_ROOT()
 
- for package in $@
- do
-     dnf list installed $package
-     if [ $? -ne 0 ]
-     then
-         echo "$package is not installed..going to install"
-         dnf install $package -y
-         VALIDATE $? "Installing $package"
-     else
-         echo "$package  is alraedy installed...Nothinf to do"
-     fi      
- done
+for package in $@
+do
+    dnf list installed $package
+    if [ $? -ne 0 ]
+    then
+        echo "$package is not installed..going to install"
+        dnf install $package -y
+        VALIDATE $? "Installing $package"
+    else
+        echo "$package  is alraedy installed...Nothing to do"
+    fi      
+done
