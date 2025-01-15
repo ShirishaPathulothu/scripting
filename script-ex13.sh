@@ -17,7 +17,7 @@ Userid=$(id -u)
 CHECK_ROOT(){
     if [ $Userid -ne 0 ]
     then
-       echo -e "$R Please login with root previleges $N" &>>$LOG_FILE
+       echo -e "$R Please login with root previleges $N" | tee -a $LOG_FILE
        exit 1
     fi   
 }
@@ -25,10 +25,10 @@ CHECK_ROOT(){
 VALIDATE(){
     if [ $1 -ne 0 ]
     then
-       echo  -e "$2 is.. $R Failed $N" &>>$LOG_FILE
+       echo  -e "$2 is.. $R Failed $N" | tee -a $LOG_FILE
        exit 1
     else
-       echo -e "$2 is.. $G Success $N" &>>$LOG_FILE
+       echo -e "$2 is.. $G Success $N" | tee -a $LOG_FILE
     fi       
 }
 
@@ -37,7 +37,7 @@ USAGE(){
      exit 1
 }
 
-echo "Script started executed at: $(date)" &>>$LOG_FILE
+echo "Script started executed at: $(date)" | tee -a $LOG_FILE
 
 CHECK_ROOT
 
@@ -51,10 +51,10 @@ do
    dnf list installed $package &>>$LOG_FILE
    if [ $? -ne 0 ]
    then
-      echo "$package is not installed.. going to install" &>>$LOG_FILE
+      echo "$package is not installed.. going to install" | tee -a $LOG_FILE
       dnf install $package -y &>>$LOG_FILE
       VALIDATE $? "Installing $package"
     else
-      echo -e "$package is $Y already installed.. Nothing to do $N" &>>$LOG_FILE
+      echo -e "$package is $Y already installed.. Nothing to do $N" | tee -a $LOG_FILE
     fi
 done
