@@ -12,7 +12,7 @@ CHECK_ROOT(){
     if [ $Userid -ne 0 ]
     then
        echo "please login with root previleges"
-       exit1
+       exit 1
     fi   
 }
 
@@ -39,4 +39,4 @@ do
     else
         echo "$package  is alraedy installed...Nothing to do"
     fi      
-done
+done 
