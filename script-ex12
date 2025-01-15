@@ -22,7 +22,7 @@ Userid=$(id -u)
         echo -e "$2 is ... $R Failed $N"
         exit 1
     else
-        echo "$2 is ... $G Success $N"
+        echo  -e "$2 is ... $G Success $N"
     fi        
  }
 
@@ -37,6 +37,6 @@ Userid=$(id -u)
          dnf install $package -y
          VALIDATE $? "Installing $package"
      else
-         echo "$package alraedy installed...Nothinf to do"
+         echo "$package  is alraedy installed...Nothinf to do"
      fi      
  done
