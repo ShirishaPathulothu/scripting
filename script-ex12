@@ -35,9 +35,9 @@ do
    dnf list installed $package
    if [ $? -ne 0 ]
    then
-       echo "Git is not installed.. going to install"
-       dnf install git -y
-       VALIDATE $? "Installing git"
+       echo "$package is not installed.. going to install"
+       dnf install $package -y
+       VALIDATE $? "Installing $package"
     else
        echo "$package is already installed.. Nothing to do"
     fi         
