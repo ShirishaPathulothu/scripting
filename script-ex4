@@ -1,4 +1,5 @@
 #!/bin/bash
+sed -i 's/\r//g' script-ex2
 
 STATES=("Telanagana" "Kerla" "AP" "UP")
 
